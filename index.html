@@ -17,7 +17,7 @@
         <div @click="addTodo">Add</div>
         <div>
             <ul>
-                <li :class="[item.done === true ? 'ms_done' : '']" v-for="(item, i) in todoList">
+                <li @click="doneUndone" :class="[item.done === true ? 'ms_done' : '']" v-for="(item, i) in todoList">
                     {{item.testo}}
                     <div @click="removeTodo(i)">X</div> 
                 </li>

@@ -30,6 +30,9 @@ new Vue({
         },
         removeTodo: function(index) {
             this.todoList.splice(index, 1);
+        },
+        doneUndone: function() {
+            
         }
     }
 });
