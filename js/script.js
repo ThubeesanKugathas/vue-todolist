@@ -23,10 +23,12 @@ new Vue({
     methods: {
         // push nuovo object nell'array
         addTodo: function () {
-            this.todoList.push(this.temporaryInputTodo);
-            this.temporaryInputTodo= {
-                testo: '',
-                done: false
+            if (this.temporaryInputTodo.testo.length > 0) {
+                this.todoList.push(this.temporaryInputTodo);
+                this.temporaryInputTodo= {
+                    testo: '',
+                    done: false
+                }
             }
         },
         // splice obejct dall'array
