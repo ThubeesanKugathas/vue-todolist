@@ -23,6 +23,7 @@ new Vue({
     methods: {
         // push nuovo object nell'array
         addTodo: function () {
+            // if per controllare che si creino todo vuoti
             if (this.temporaryInputTodo.testo.length > 0) {
                 this.todoList.push(this.temporaryInputTodo);
                 this.temporaryInputTodo= {
