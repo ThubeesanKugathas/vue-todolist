@@ -27,6 +27,9 @@ new Vue({
                 testo: '',
                 done: false
             }
+        },
+        removeTodo: function(index) {
+            this.todoList.splice(index, 1);
         }
     }
 });
