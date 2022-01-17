@@ -21,6 +21,7 @@ new Vue({
         },
     },
     methods: {
+        // push nuovo object nell'array
         addTodo: function () {
             this.todoList.push(this.temporaryInputTodo);
             this.temporaryInputTodo= {
@@ -28,9 +29,11 @@ new Vue({
                 done: false
             }
         },
+        // splice obejct dall'array
         removeTodo: function(index) {
             this.todoList.splice(index, 1);
         },
+        // funzione che cambia proprietà al key "done" degli oggetti
         doneUndone: function(index) {
             this.todoList[index].done = !this.todoList[index].done;
         }
