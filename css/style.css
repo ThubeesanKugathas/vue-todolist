@@ -1,3 +1,15 @@
-.ms_done {
+.ms_done span:first-child {
     text-decoration: line-through;
+}
+
+.ms_add-input {
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.ms_add-button {
+    background-color: #ccc;
+    border: 1px solid #000;
+    padding: 0 5px ;
+    border-radius: 10px;
 }

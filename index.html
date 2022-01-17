@@ -13,15 +13,20 @@
 <body>
     <div id="app">
 
-        <input v-model="temporaryInputTodo.testo" @keyup.enter="addTodo">
-        <div @click="addTodo">Add</div>
-        <div>
-            <ul>
-                <li @click="doneUndone" :class="[item.done === true ? 'ms_done' : '']" v-for="(item, i) in todoList">
-                    {{item.testo}}
-                    <div @click="removeTodo(i)">X</div> 
-                </li>
-            </ul>
+        <div class="container">
+            <div class="d-flex justify-content-center my-3">
+                <input class="ms_add-input" placeholder="New-Todo" v-model="temporaryInputTodo.testo" @keyup.enter="addTodo">
+                <span class="mx-3 ms_add-button" @click="addTodo">Add</span>
+            </div>
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between" @click="doneUndone" :class="[item.done === true ? 'ms_done' : '']" v-for="(item, i) in todoList">
+                        <span>{{item.testo}}</span>
+                        <span @click="removeTodo(i)">X</span> 
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
 
